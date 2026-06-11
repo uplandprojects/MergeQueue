@@ -19,115 +19,12 @@ import {
   ThemeProvider,
   Toolbar,
   Typography,
-  createTheme,
 } from '@mui/material'
 import AddShoppingCartRoundedIcon from '@mui/icons-material/AddShoppingCartRounded'
 import RemoveShoppingCartRoundedIcon from '@mui/icons-material/RemoveShoppingCartRounded'
 import FlightTakeoffRoundedIcon from '@mui/icons-material/FlightTakeoffRounded'
-
-type TravelProduct = {
-  id: number
-  name: string
-  location: string
-  category: 'Experience' | 'Stay' | 'Tour'
-  price: number
-  rating: number
-  duration: string
-  description: string
-  highlight: string
-}
-
-const products: TravelProduct[] = [
-  {
-    id: 1,
-    name: 'Santorini Sunset Cruise',
-    location: 'Santorini, Greece',
-    category: 'Experience',
-    price: 199,
-    rating: 4.9,
-    duration: '5 hours',
-    description:
-      'Sail across caldera waters with a local crew, volcanic hot springs, and a candlelit dinner on deck.',
-    highlight: 'Dinner included',
-  },
-  {
-    id: 2,
-    name: 'Alpine Glass Lodge',
-    location: 'Interlaken, Switzerland',
-    category: 'Stay',
-    price: 320,
-    rating: 4.8,
-    duration: '1 night',
-    description:
-      'Mountain-facing suite with panoramic windows, sunrise breakfast, and direct cable car transfers.',
-    highlight: 'Mountain-view suite',
-  },
-  {
-    id: 3,
-    name: 'Tokyo Street Food Walk',
-    location: 'Tokyo, Japan',
-    category: 'Tour',
-    price: 89,
-    rating: 4.7,
-    duration: '3 hours',
-    description:
-      'Taste your way through hidden alley izakayas and market stalls with a bilingual local guide.',
-    highlight: '8 tasting stops',
-  },
-  {
-    id: 4,
-    name: 'Sahara Stargazer Camp',
-    location: 'Merzouga, Morocco',
-    category: 'Experience',
-    price: 149,
-    rating: 4.9,
-    duration: 'Overnight',
-    description:
-      'Camel ride at dusk, luxury tent camp, and telescope-led constellations under desert skies.',
-    highlight: 'Guided night sky session',
-  },
-  {
-    id: 5,
-    name: 'Amalfi Coast Road Escape',
-    location: 'Amalfi, Italy',
-    category: 'Tour',
-    price: 175,
-    rating: 4.6,
-    duration: 'Full day',
-    description:
-      'A scenic coastal journey with cliffside viewpoints, lemon groves, and seaside village stops.',
-    highlight: 'Private transfer option',
-  },
-]
-
-const theme = createTheme({
-  palette: {
-    mode: 'light',
-    primary: {
-      main: '#0f6e8c',
-    },
-    secondary: {
-      main: '#f6a01a',
-    },
-    background: {
-      default: '#f5f8fb',
-      paper: '#ffffff',
-    },
-  },
-  typography: {
-    fontFamily: 'Poppins, Segoe UI, sans-serif',
-    h3: {
-      fontWeight: 700,
-      letterSpacing: '-0.02em',
-    },
-    h6: {
-      fontWeight: 600,
-    },
-  },
-  shape: {
-    borderRadius: 16,
-  },
-})
+import { products } from './data/products'
+import { theme } from './theme/travelTheme'
 
 function App() {
   const [selectedId, setSelectedId] = useState(products[0].id)
