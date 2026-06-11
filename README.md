@@ -41,6 +41,18 @@ The local URL will be shown in the terminal (typically `http://localhost:5173`).
 npm run build
 ```
 
+## Run Tests
+
+```bash
+npm run test
+```
+
+For watch mode while developing:
+
+```bash
+npm run test:watch
+```
+
 ## Preview Production Build
 
 ```bash
