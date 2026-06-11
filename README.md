@@ -38,6 +38,12 @@ npm run dev
 
 The local URL will be shown in the terminal (typically `http://localhost:5173`).
 
+## Lint Code
+
+```bash
+npm run lint
+```
+
 ## Build for Production
 
 ```bash
@@ -64,6 +70,17 @@ npm run preview
 
 ## Project Structure
 
-- `src/App.tsx`: Main UI and application logic (catalog, selected product, cart state)
+- `src/App.tsx`: Main UI and cart state management
+- `src/data/products.ts`: Product catalog data
+- `src/theme/travelTheme.ts`: Material UI theme configuration
+- `src/App.test.tsx`: Integration tests using Vitest + React Testing Library
+- `src/test/setup.ts`: Test environment configuration
 - `src/index.css`: Global styles and font imports
 - `src/main.tsx`: App bootstrap
+
+## Development Tips
+
+- The app uses React hooks for state management—no external store needed
+- Material UI components are pre-configured with a travel-themed color palette (ocean blues + sunset oranges)
+- Tests run with jsdom and can be run in watch mode for TDD workflows
+- The CI/CD pipeline (`.github/workflows/status-checks.yml`) runs build + tests on all PRs and merge group checks
