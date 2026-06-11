@@ -1,5 +1,8 @@
 # Contoso Travel
 
+[![Status Checks](https://github.com/uplandprojects/MergeQueue/actions/workflows/status-checks.yml/badge.svg)](https://github.com/uplandprojects/MergeQueue/actions/workflows/status-checks.yml)
+
+
 Contoso Travel is a fictitious travel product catalog built with React, TypeScript, Vite, and Material UI.
 
 The app lets users browse curated travel products, view details for a selected product, and add or remove items from a shopping cart.
